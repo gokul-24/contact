@@ -49,6 +49,19 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<executions>
+        				<execution>
+        				    <goals>
+        				        <goal>repackage</goal>
+        				    </goals>
+        				    <configuration>
+        				        <classifier>spring-boot</classifier>
+        				        <mainClass>
+        				          com.baeldung.executable.ExecutableMavenJar
+        				        </mainClass>
+        				    </configuration>
+        				</execution>
+    				</executions>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
